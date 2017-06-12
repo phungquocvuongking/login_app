@@ -22,13 +22,10 @@ def user_params
 end
 
 def show
-	@user = User.new
-	@user.id = '1'
-    #@user = User.find_by id: params[:id]
+	@user = User.find_by id: params[:id]
 end
 
 def index
-	authorize @users
 	@users = User.all
 end
 
